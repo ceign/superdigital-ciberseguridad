@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "PF Handbook Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cloud.modyocdn.com/uploads/31ef7009-be86-4eb0-998a-06aee9154d7b/original/PFHandbookProRegular.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "PF Handbook Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cloud.modyocdn.com/uploads/a29afe16-8d13-4589-9ece-c98f78190a58/original/PFHandbookProBold.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "PF Handbook Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://cloud.modyocdn.com/uploads/21e44181-684c-432c-ba81-a61715e5d2f2/original/PFHandbookProBlack.ttf)
+    format("truetype");
+}
+
+:root {
+  --font: "PF Handbook Pro";
+  --white: #ffffff;
+  --orange-primary: #f9ab0d;
+  --background: #362455;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "PF Handbook Pro";
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+section.intro {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+section.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(src/img/background-intro.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 750px;
+  background-position: top center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.intro__wrapper {
+  max-width: 360px;
+  margin: auto;
+}
+
+.intro .intro__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 370px;
+  padding: 2rem;
+}
+
+.intro .intro__title::before,
+.intro .intro__title::after {
+  content: "";
+  position: absolute;
+  background-size: cover;
+}
+
+.intro .intro__title::before {
+  bottom: -70px;
+  left: 26px;
+  width: 70px;
+  height: 70px;
+  background-image: url(src/img/bubble-1.png);
+}
+
+.intro .intro__title::after {
+  bottom: -28px;
+  right: 35px;
+  width: 40px;
+  height: 40px;
+  background-image: url(src/img/bubble-2.png);
+}
+
+.intro .intro__title h1 {
+  color: var(--white);
+  font: 400 2.875rem/0.9 var(--font);
+  text-transform: uppercase;
+}
+
+.intro .intro__title h1 span {
+  display: block;
+}
+
+.intro .intro__title h1 span:first-child {
+  font-weight: 700;
+}
+
+.intro .intro__title h1 span:last-child {
+  color: var(--orange-primary);
+  font-size: 3.125rem;
+  font-weight: 900;
+}
+
+.intro .intro__image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 410px;
+}
+
+.intro .intro__image img {
+  display: block;
+  width: 210px;
+}
+
+/* MEDIA QUERIES */
+
+/* 1024px */
+@media (min-width: 64em) {
+  .wrapper {
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    height: 7023px;
+    position: relative;
+  }
+
+  /* .wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(src/img/test.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    z-index: -1;
+  } */
+
+  section.intro::before {
+    background-image: none;
+  }
+
+  .intro__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+  }
+
+  .intro .intro__title {
+    align-items: flex-start;
+    padding: 2rem 2rem 7rem;
+  }
+
+  .intro .intro__title::before {
+    bottom: 2px;
+    left: 82px;
+  }
+
+  .intro .intro__title::after {
+    top: 200px;
+    right: 50px;
+    bottom: initial;
+    width: 55px;
+    height: 55px;
+  }
+
+  .intro .intro__title h1 {
+    font: 400 58px/0.8 var(--font);
+  }
+
+  .intro .intro__title h1 span:last-child {
+    font-size: 66px;
+  }
+
+  .intro .intro__image img {
+    display: block;
+    width: 270px;
+  }
+}
+
+/* 1240px */
+@media (min-width: 77.5em) {
+  .intro__wrapper {
+    max-width: 1100px;
+    padding-top: 4rem;
+  }
+
+  .intro .intro__title h1 {
+    font: 400 70px/0.8 var(--font);
+  }
+
+  .intro .intro__title h1 span:last-child {
+    font-size: 76px;
+  }
+
+  .intro .intro__image img {
+    width: 310px;
+  }
+}
+
+/* 1600px */
+@media (min-width: 100em) {
+  .intro__wrapper {
+    max-width: 1250px;
+    padding-top: 6rem;
+  }
+
+  .intro .intro__title h1 {
+    font: 400 86px/0.8 var(--font);
+  }
+
+  .intro .intro__title h1 span:last-child {
+    font-size: 90px;
+  }
+
+  .intro .intro__title::after {
+    right: 44px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .intro .intro__title::before {
+    bottom: -26px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .intro .intro__image img {
+    width: 350px;
+  }
+}
