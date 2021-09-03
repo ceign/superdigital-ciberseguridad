@@ -35,15 +35,16 @@
   --white: #ffffff;
   --orange-primary: #f9ab0d;
   --yellow-primary: #f3bb41;
+  --violet-primary: #a20883;
   --background: #362455;
 }
 
 body {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "PF Handbook Pro";
   background-color: var(--background);
 
-  padding-bottom: 510px;
+  padding-bottom: 20vh;
 }
 
 * {
@@ -57,6 +58,30 @@ body {
   height: 100%;
 }
 
+.wrapper h1::selection,
+.wrapper h2::selection,
+.wrapper h3::selection,
+.wrapper p::selection,
+.wrapper span::selection,
+.wrapper b::selection,
+.wrapper img::selection {
+  color: var(--white);
+  background: var(--violet-primary);
+}
+
+/* KEYFRAMES */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+}
+
+/* KEYFRAMES */
+
 /* COMPONENTS */
 
 .step__title {
@@ -67,7 +92,7 @@ body {
 
 .step__title h2 {
   color: var(--white);
-  font: 400 34px/1 var(--font);
+  font: 400 2.125rem/1 var(--font);
   position: relative;
   text-transform: uppercase;
 }
@@ -79,7 +104,7 @@ body {
 
 .step__title img {
   display: block;
-  margin: 0 12px 0 0;
+  margin: 0 0.75rem 0 0;
 }
 
 .step__paragraph {
@@ -88,7 +113,7 @@ body {
 
 .step__paragraph p {
   color: var(--white);
-  font: 300 19px/1.1 var(--font);
+  font: 300 1.1875rem/1.1 var(--font);
 }
 
 .step__paragraph span.step__paragraph--orange {
@@ -100,7 +125,7 @@ body {
 }
 
 .step__title--column img {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
 }
 
 .step__title--column h2 {
@@ -116,7 +141,7 @@ body {
 }
 
 .step__title--revert img {
-  margin: 0 0 0 12px;
+  margin: 0 0 0 0.75rem;
 }
 
 .step__title--revert h2 {
@@ -130,37 +155,37 @@ body {
 .step-item {
   background-color: var(--background);
   position: relative;
-  width: 270px;
-  height: 160px;
+  width: 16.875rem;
+  height: 10rem;
   text-align: center;
   padding: 0 1.8rem;
   margin: auto;
-  border-radius: 18px;
+  border-radius: 1.125rem;
 }
 
 .step-item::before {
   content: "";
   background: linear-gradient(130deg, #9b1414, #ce03a5, #ce8d01, #9b1414);
   position: absolute;
-  top: -3px;
-  left: -3px;
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
+  top: -0.1875rem;
+  left: -0.1875rem;
+  width: calc(100% + 0.375rem);
+  height: calc(100% + 0.375rem);
   z-index: -1;
-  border-radius: 18px;
+  border-radius: 1.125rem;
 }
 
 .step-item h3 {
   color: var(--white);
-  font: 700 26px/1.1 var(--font);
+  font: 700 1.625rem/1.1 var(--font);
   padding: 0.75rem 0;
 }
 
 .step-item p {
   color: var(--yellow-primary);
-  font: 400 17px/1.1 var(--font);
-  height: calc(100% - 80px);
-  letter-spacing: 0.2px;
+  font: 400 1.0625rem/1.1 var(--font);
+  height: calc(100% - 5rem);
+  letter-spacing: 0.0125rem;
 }
 
 .step-item p span {
@@ -186,13 +211,13 @@ section.intro::before {
   height: 100%;
   background-image: url(src/img/background-intro.svg);
   background-repeat: no-repeat;
-  background-size: 100% 750px;
+  background-size: 100% 46.875rem;
   background-position: top center;
   z-index: -1;
 }
 
 .intro__wrapper {
-  max-width: 360px;
+  max-width: 22.5rem;
   margin: auto;
 }
 
@@ -202,8 +227,8 @@ section.intro::before {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  min-height: 370px;
-  padding: 32px;
+  min-height: 23.125rem;
+  padding: 2rem;
 }
 
 .intro .intro__title::before,
@@ -211,27 +236,29 @@ section.intro::before {
   content: "";
   position: absolute;
   background-size: cover;
+  animation: bounce 4s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
 }
 
 .intro .intro__title::before {
-  bottom: -70px;
-  left: 26px;
-  width: 70px;
-  height: 70px;
+  bottom: -4.375rem;
+  left: 1.625rem;
+  width: 4.375rem;
+  height: 4.375rem;
   background-image: url(src/img/bubble-1.png);
 }
 
 .intro .intro__title::after {
-  bottom: -28px;
-  right: 35px;
-  width: 40px;
-  height: 40px;
+  bottom: -1.75rem;
+  right: 2.1875rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-image: url(src/img/bubble-2.png);
+  animation: bounce 2s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
 }
 
 .intro .intro__title h1 {
   color: var(--white);
-  font: 400 46px/0.9 var(--font);
+  font: 400 2.875rem/0.9 var(--font);
   text-transform: uppercase;
 }
 
@@ -245,7 +272,7 @@ section.intro::before {
 
 .intro .intro__title h1 span:last-child {
   color: var(--orange-primary);
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 900;
 }
 
@@ -253,12 +280,12 @@ section.intro::before {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 410px;
+  min-height: 25.625rem;
 }
 
 .intro .intro__image img {
   display: block;
-  width: 210px;
+  width: 13.125rem;
 }
 
 /* SECTION INTRO */
@@ -271,7 +298,7 @@ section.step-1 {
 }
 
 .step-1__wrapper {
-  max-width: 360px;
+  max-width: 22.5rem;
   padding: 5rem 1rem 3rem;
   margin: auto;
 }
@@ -282,13 +309,15 @@ section.step-1 {
   align-items: center;
   justify-content: flex-end;
   margin-top: 6rem;
-  min-height: 420px;
+  min-height: 26.25rem;
+  pointer-events: none;
 }
 
 .step-1__decoration img {
   display: block;
   width: 100%;
-  max-width: 210px;
+  max-width: 13.125rem;
+  animation: bounce 2s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
 }
 
 /* SECTION STEP 1 */
@@ -302,7 +331,7 @@ section.step-2 {
 
 .step-2__wrapper {
   position: relative;
-  max-width: 360px;
+  max-width: 22.5rem;
   padding: 5rem 0 0;
   margin: auto;
 }
@@ -317,20 +346,20 @@ section.step-2 {
 .step-2__wrapper .step-2__text::after {
   content: "";
   position: absolute;
-  width: 80px;
-  height: 100px;
+  width: 5rem;
+  height: 6.25rem;
   background-image: url(src/img/lock.png);
   background-size: contain;
   background-repeat: no-repeat;
-  bottom: -134px;
+  bottom: -8.375rem;
 }
 
 .step-2__wrapper .step-2__text::before {
-  left: 60px;
+  left: 3.75rem;
 }
 
 .step-2__wrapper .step-2__text::after {
-  right: 60px;
+  right: 3.75rem;
   transform: scaleX(-1);
 }
 
@@ -352,14 +381,15 @@ section.step-2 {
 .step-2__wrapper .step-2__items::before {
   content: "";
   position: absolute;
-  bottom: -54px;
-  right: 56px;
-  width: 70px;
-  height: 70px;
+  bottom: -3.375rem;
+  right: 3.5rem;
+  width: 4.375rem;
+  height: 4.375rem;
   background-image: url(src/img/bubble-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+  animation: bounce 2.5s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
 }
 
 /* SECTION STEP 2 */
@@ -372,7 +402,7 @@ section.step-3-4 {
 }
 
 .step-3-4__wrapper {
-  max-width: 360px;
+  max-width: 22.5rem;
   padding: 8rem 1rem 3rem;
   margin: auto;
 }
@@ -412,9 +442,9 @@ section.step-5 {
 .step-5__text::after {
   content: "";
   position: absolute;
-  top: -24px;
-  width: 120px;
-  height: 120px;
+  top: -1.5rem;
+  width: 7.5rem;
+  height: 7.5rem;
   background-image: url(src/img/arm.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -436,15 +466,84 @@ section.step-5 {
 
 /* SECTION STEP 5 */
 
+/* SECTION STEP 6 */
+
+section.step-6 {
+  width: 100%;
+  height: auto;
+}
+
+.step-6__wrapper {
+  max-width: 22.5rem;
+  padding: 5rem 1rem 3rem;
+  margin: auto;
+}
+
+.step-6__text .step__paragraph p {
+  margin-bottom: 0.5rem;
+}
+
+.step-6__card {
+  padding-top: 3rem;
+}
+
+.step-6__card img {
+  display: block;
+  width: 100%;
+  max-width: 20.625rem;
+  margin: auto;
+}
+
+/* SECTION STEP 6 */
+
+/* SECTION STEP 7 */
+
+section.step-7 {
+  width: 100%;
+  height: auto;
+}
+
+.step-7__wrapper {
+  max-width: 22.5rem;
+  padding: 5rem 1rem 3rem;
+  margin: auto;
+}
+
+.step-7__bank {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.step-7__bank::before {
+  content: "";
+  position: absolute;
+  bottom: -9.375rem;
+  right: calc(50% - 7.5rem);
+  width: 15rem;
+  height: 6.25rem;
+  background-image: url(src/img/double-bubble-wide.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bounce 4s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
+}
+
+.step-7__bank img {
+  display: block;
+  width: 100%;
+  max-width: 20.625rem;
+  margin: auto;
+}
+
+/* SECTION STEP 7 */
+
 /* MEDIA QUERIES */
 
-/* 1024px */
+/* 64rem */
 @media (min-width: 64em) {
   .wrapper {
-    border: 1px solid white;
     width: 100%;
     height: 100%;
-    height: 7023px;
+    /* height: 438.9375rem; */
     position: relative;
   }
 
@@ -471,38 +570,38 @@ section.step-5 {
   .intro__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 900px;
+    max-width: 56.25rem;
   }
 
   .intro .intro__title {
     align-items: flex-start;
-    padding: 32px 32px 112px;
+    padding: 2rem 2rem 7rem;
   }
 
   .intro .intro__title::before {
-    bottom: 2px;
-    left: 82px;
+    bottom: 0.125rem;
+    left: 5.125rem;
   }
 
   .intro .intro__title::after {
-    top: 200px;
-    right: 50px;
+    top: 12.5rem;
+    right: 3.125rem;
     bottom: initial;
-    width: 55px;
-    height: 55px;
+    width: 3.4375rem;
+    height: 3.4375rem;
   }
 
   .intro .intro__title h1 {
-    font: 400 58px/0.8 var(--font);
+    font: 400 3.625rem/0.8 var(--font);
   }
 
   .intro .intro__title h1 span:last-child {
-    font-size: 66px;
+    font-size: 4.125rem;
   }
 
   .intro .intro__image img {
     display: block;
-    width: 270px;
+    width: 16.875rem;
   }
 
   /* SECTION INTRO */
@@ -514,7 +613,7 @@ section.step-5 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 900px;
+    max-width: 56.25rem;
     padding: 7rem 1rem 3rem;
   }
 
@@ -524,17 +623,19 @@ section.step-5 {
   .step-1__text::before {
     content: "";
     position: absolute;
-    bottom: -70px;
-    left: 28px;
-    width: 50px;
-    height: 50px;
+    bottom: -4.375rem;
+    left: 1.75rem;
+    width: 3.125rem;
+    height: 3.125rem;
     background-image: url(src/img/bubble-small.png);
     background-size: cover;
+    animation: bounce 3.5s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite
+      alternate;
   }
 
   .step-1__wrapper .step__title,
   .step-1__wrapper .step__paragraph {
-    max-width: 394px;
+    max-width: 24.625rem;
   }
 
   .step-1__decoration {
@@ -551,23 +652,23 @@ section.step-5 {
   /* SECTION STEP 2 */
 
   .step-2__wrapper {
-    max-width: 900px;
+    max-width: 56.25rem;
   }
 
   .step-2__wrapper .step-2__text::before,
   .step-2__wrapper .step-2__text::after {
-    width: 90px;
-    height: 110px;
-    top: 40px;
+    width: 5.625rem;
+    height: 6.875rem;
+    top: 2.5rem;
     bottom: initial;
   }
 
   .step-2__wrapper .step-2__text::before {
-    left: 200px;
+    left: 12.5rem;
   }
 
   .step-2__wrapper .step-2__text::after {
-    right: 200px;
+    right: 12.5rem;
   }
 
   .step-2__wrapper .step-2__items {
@@ -579,10 +680,10 @@ section.step-5 {
   }
 
   .step-2__wrapper .step-2__items::before {
-    bottom: -20px;
-    right: 56px;
-    width: 76px;
-    height: 76px;
+    bottom: -1.25rem;
+    right: 3.5rem;
+    width: 4.75rem;
+    height: 4.75rem;
   }
 
   /* SECTION STEP 2 */
@@ -594,7 +695,7 @@ section.step-5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 900px;
+    max-width: 56.25rem;
     padding: 3rem 1rem;
     margin: 8rem auto 6rem;
   }
@@ -602,10 +703,10 @@ section.step-5 {
   .step-3-4__wrapper::before {
     content: "";
     position: absolute;
-    top: calc(50% - 90px);
-    left: calc(50% - 90px);
-    width: 180px;
-    height: 180px;
+    top: calc(50% - 5.625rem);
+    left: calc(50% - 5.625rem);
+    width: 11.25rem;
+    height: 11.25rem;
     background-image: url(src/img/x.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -644,33 +745,134 @@ section.step-5 {
 
   .step-5__text::before,
   .step-5__text::after {
-    top: -54px;
-    width: 210px;
-    height: 210px;
+    top: -3.375rem;
+    width: 13.125rem;
+    height: 13.125rem;
+  }
+
+  .step-5__text .step__paragraph--column p {
+    position: relative;
+  }
+
+  .step-5__text .step__paragraph--column p::before {
+    content: "";
+    position: absolute;
+    top: 4.625rem;
+    left: 6.875rem;
+    width: 10rem;
+    height: 8.75rem;
+    background-image: url(src/img/double-bubble.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: bounce 4s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite alternate;
   }
 
   /* SECTION STEP 5 */
+
+  /* SECTION STEP 6 */
+
+  .step-6__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 56.25rem;
+    padding: 11rem 1rem 3rem;
+  }
+
+  .step-6__text,
+  .step-6__card {
+    width: 50%;
+  }
+
+  .step-6__card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+
+  .step-6__card::before {
+    content: "";
+    position: absolute;
+    bottom: -6.25rem;
+    right: 4.6875rem;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    background-image: url(src/img/bubble-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(240deg);
+    animation: bounce 2.5s cubic-bezier(0.48, 0.03, 0.55, 0.98) infinite
+      alternate;
+  }
+
+  .step-6__card img {
+    max-width: 21.875rem;
+    margin: initial;
+  }
+
+  /* SECTION STEP 6 */
+
+  /* SECTION STEP 7 */
+
+  .step-7__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 56.25rem;
+  }
+
+  .step-7__text,
+  .step-7__bank {
+    width: 50%;
+  }
+
+  .step-7__text .step__paragraph--revert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .step-7__text .step__paragraph--revert p {
+    width: 50ch;
+  }
+
+  .step-7__bank::before {
+    right: 0;
+    bottom: -7.5rem;
+    width: 10rem;
+  }
+
+  .step-7__bank img {
+    max-width: 21.875rem;
+    margin: initial;
+  }
+
+  /* SECTION STEP 7 */
 }
 
-/* 1240px */
+/* 77.5rem */
 @media (min-width: 77.5em) {
   /* COMPONENTS */
 
   .step__title h2 {
-    font: 400 42px/0.8 var(--font);
+    font: 400 2.625rem/0.8 var(--font);
   }
 
   .step__paragraph p {
-    font: 300 21px/1.1 var(--font);
+    font: 300 1.3125rem/1.1 var(--font);
   }
 
   .step-item {
-    width: 320px;
-    height: 190px;
+    width: 20rem;
+    height: 11.875rem;
   }
 
   .step-item p {
-    font: 400 19px/1.1 var(--font);
+    font: 400 1.1875rem/1.1 var(--font);
   }
 
   .step-2__items .step-item:first-child p {
@@ -690,20 +892,20 @@ section.step-5 {
   /* SECTION INTRO */
 
   .intro__wrapper {
-    max-width: 1100px;
-    padding-top: 64px;
+    max-width: 68.75rem;
+    padding-top: 4rem;
   }
 
   .intro .intro__title h1 {
-    font: 400 70px/0.8 var(--font);
+    font: 400 4.375rem/0.8 var(--font);
   }
 
   .intro .intro__title h1 span:last-child {
-    font-size: 76px;
+    font-size: 4.75rem;
   }
 
   .intro .intro__image img {
-    width: 310px;
+    width: 19.375rem;
   }
 
   /* SECTION INTRO */
@@ -711,13 +913,13 @@ section.step-5 {
   /* SECTION STEP1 */
 
   .step-1__wrapper {
-    max-width: 1100px;
+    max-width: 68.75rem;
     padding: 10rem 1rem 3rem;
   }
 
   .step-1__wrapper .step__title,
   .step-1__wrapper .step__paragraph {
-    max-width: 440px;
+    max-width: 27.5rem;
   }
 
   /* SECTION STEP1 */
@@ -725,21 +927,21 @@ section.step-5 {
   /* SECTION STEP 2 */
 
   .step-2__wrapper {
-    max-width: 1100px;
+    max-width: 68.75rem;
   }
 
   .step-2__wrapper .step-2__text::before,
   .step-2__wrapper .step-2__text::after {
-    width: 110px;
-    height: 130px;
+    width: 6.875rem;
+    height: 8.125rem;
   }
 
   .step-2__wrapper .step-2__text::before {
-    left: 260px;
+    left: 16.25rem;
   }
 
   .step-2__wrapper .step-2__text::after {
-    right: 260px;
+    right: 16.25rem;
   }
 
   /* SECTION STEP 2 */
@@ -747,7 +949,7 @@ section.step-5 {
   /* SECTION STEP 3-4 */
 
   .step-3-4__wrapper {
-    max-width: 1100px;
+    max-width: 68.75rem;
   }
 
   /* SECTION STEP 3-4 */
@@ -760,92 +962,134 @@ section.step-5 {
 
   .step-5__text::before,
   .step-5__text::after {
-    top: -60px;
-    width: 300px;
-    height: 300px;
+    top: -3.75rem;
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+
+  .step-5__text .step__paragraph--column p::before {
+    top: 6.25rem;
   }
 
   /* SECTION STEP 5 */
+
+  /* SECTION STEP 6 */
+
+  .step-6__wrapper {
+    max-width: 68.75rem;
+  }
+
+  .step-6__card::before {
+    bottom: -7.5rem;
+    right: 5.9375rem;
+    width: 4.625rem;
+    height: 4.625rem;
+  }
+
+  .step-6__card img {
+    max-width: 23.75rem;
+  }
+
+  /* SECTION STEP 6 */
+
+  /* SECTION STEP 7 */
+
+  .step-7__wrapper {
+    max-width: 68.75rem;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .step-7__bank::before {
+    right: -4.5rem;
+    bottom: -8.125rem;
+    width: 15.625rem;
+  }
+
+  .step-7__bank img {
+    max-width: 30rem;
+  }
+
+  /* SECTION STEP 7 */
 }
 
-/* 1600px */
+/* 100rem */
 @media (min-width: 100em) {
   /* COMPONENTS */
 
   .step__title h2 {
-    font: 400 54px/0.8 var(--font);
+    font: 400 3.375rem/0.8 var(--font);
   }
 
   .step__paragraph p {
-    font: 300 24px/1.2 var(--font);
+    font: 300 1.5rem/1.2 var(--font);
   }
 
   /* COMPONENTS */
 
   /* SECTION INTRO */
   .intro__wrapper {
-    max-width: 1250px;
-    padding-top: 96px;
+    max-width: 78.125rem;
+    padding-top: 6rem;
   }
 
   .intro .intro__title h1 {
-    font: 400 86px/0.8 var(--font);
+    font: 400 5.375rem/0.8 var(--font);
   }
 
   .intro .intro__title h1 span:last-child {
-    font-size: 90px;
+    font-size: 5.625rem;
   }
 
   .intro .intro__title::after {
-    right: 44px;
-    width: 60px;
-    height: 60px;
+    right: 2.75rem;
+    width: 3.75rem;
+    height: 3.75rem;
   }
 
   .intro .intro__title::before {
-    bottom: -26px;
-    width: 90px;
-    height: 90px;
+    bottom: -1.625rem;
+    width: 5.625rem;
+    height: 5.625rem;
   }
 
   .intro .intro__image img {
-    width: 350px;
+    width: 21.875rem;
   }
   /* SECTION INTRO */
 
   /* SECTION STEP1 */
 
   .step-1__wrapper {
-    max-width: 1250px;
+    max-width: 78.125rem;
     padding: 16rem 1rem 3rem;
   }
 
   .step-1__wrapper .step__title,
   .step-1__wrapper .step__paragraph {
-    max-width: 504px;
+    max-width: 31.5rem;
   }
 
   /* SECTION STEP1 */
 
   /* SECTION STEP 2 */
   .step-2__wrapper {
-    max-width: 1250px;
+    max-width: 78.125rem;
     padding: 10rem 0 0;
   }
 
   .step-2__wrapper .step-2__text::before,
   .step-2__wrapper .step-2__text::after {
-    top: 30px;
-    width: 150px;
-    height: 180px;
+    top: 1.875rem;
+    width: 9.375rem;
+    height: 11.25rem;
   }
 
   .step-2__wrapper .step-2__text::before {
-    left: 260px;
+    left: 16.25rem;
   }
 
   .step-2__wrapper .step-2__text::after {
-    right: 260px;
+    right: 16.25rem;
   }
 
   /* SECTION STEP 2 */
@@ -853,14 +1097,14 @@ section.step-5 {
   /* SECTION STEP 3-4 */
 
   .step-3-4__wrapper {
-    max-width: 1250px;
+    max-width: 78.125rem;
   }
 
   .step-3-4__wrapper::before {
-    top: calc(50% - 120px);
-    left: calc(50% - 120px);
-    width: 240px;
-    height: 240px;
+    top: calc(50% - 7.5rem);
+    left: calc(50% - 7.5rem);
+    width: 15rem;
+    height: 15rem;
   }
 
   /* SECTION STEP 3-4 */
@@ -873,10 +1117,55 @@ section.step-5 {
 
   .step-5__text::before,
   .step-5__text::after {
-    top: -150px;
-    width: 400px;
-    height: 400px;
+    top: -9.375rem;
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .step-5__text .step__paragraph--column p::before {
+    top: 6.875rem;
+    width: 8.75rem;
+    height: 8.75rem;
   }
 
   /* SECTION STEP 5 */
+
+  /* SECTION STEP 6 */
+
+  .step-6__wrapper {
+    max-width: 78.125rem;
+  }
+
+  .step-6__card::before {
+    width: 5.25rem;
+    height: 5.25rem;
+    bottom: -9.375rem;
+    right: 6.25rem;
+  }
+
+  .step-6__card img {
+    max-width: 26.875rem;
+  }
+
+  /* SECTION STEP 6 */
+
+  /* SECTION STEP 7 */
+
+  .step-7__wrapper {
+    max-width: 78.125rem;
+    padding: 8rem 1rem 3rem;
+  }
+
+  .step-7__bank::before {
+    right: -10.625rem;
+    bottom: -8.125rem;
+    width: 18.125rem;
+    height: 7.25rem;
+  }
+
+  .step-7__bank img {
+    max-width: 50rem;
+  }
+
+  /* SECTION STEP 7 */
 }
