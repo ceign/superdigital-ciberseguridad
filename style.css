@@ -33,6 +33,7 @@
 :root {
   --font: "PF Handbook Pro";
   --white: #ffffff;
+  --black: #000000;
   --orange-primary: #f9ab0d;
   --yellow-primary: #f3bb41;
   --violet-primary: #a20883;
@@ -113,6 +114,7 @@ body {
 .step__paragraph p {
   color: var(--white);
   font: 300 1.1875rem/1.1 var(--font);
+  text-shadow: 0.0625rem 0.0625rem var(--black);
 }
 
 .step__paragraph span.step__paragraph--orange {
