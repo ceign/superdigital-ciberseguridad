@@ -197,9 +197,9 @@ body {
 /* SECTION INTRO */
 
 section.intro {
+  position: relative;
   width: 100%;
   height: auto;
-  position: relative;
 }
 
 section.intro::before {
@@ -209,7 +209,7 @@ section.intro::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(src/img/background-intro.svg);
+  background-image: url(src/img/bg-intro-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100% 46.875rem;
   background-position: top center;
@@ -293,8 +293,23 @@ section.intro::before {
 /* SECTION STEP 1 */
 
 section.step-1 {
+  position: relative;
   width: 100%;
   height: auto;
+}
+
+section.step-1::before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(src/img/frame-1-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  z-index: -1;
 }
 
 .step-1__wrapper {
@@ -325,8 +340,25 @@ section.step-1 {
 /* SECTION STEP 2 */
 
 section.step-2 {
+  position: relative;
   width: 100%;
   height: auto;
+}
+
+section.step-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(src/img/frame-1-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  z-index: -1;
+  transform: scaleX(-1);
+  transform: scaleY(-1);
 }
 
 .step-2__wrapper {
@@ -425,8 +457,24 @@ section.step-3-4 {
 /* SECTION STEP 5 */
 
 section.step-5 {
+  position: relative;
   width: 100%;
   height: auto;
+}
+
+section.step-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190%;
+  background-image: url(src/img/frame-1-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70%;
+  z-index: -1;
+  transform: rotate(-180deg);
 }
 
 .step-5__wrapper {
@@ -499,13 +547,28 @@ section.step-6 {
 /* SECTION STEP 7 */
 
 section.step-7 {
+  position: relative;
   width: 100%;
   height: auto;
 }
 
+section.step-7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170%;
+  background-image: url(src/img/frame-1-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65%;
+  z-index: -1;
+}
+
 .step-7__wrapper {
   max-width: 22.5rem;
-  padding: 5rem 1rem 3rem;
+  padding: 5rem 1rem;
   margin: auto;
 }
 
@@ -517,7 +580,7 @@ section.step-7 {
 .step-7__bank::before {
   content: "";
   position: absolute;
-  bottom: -9.375rem;
+  bottom: -8.125rem;
   right: calc(50% - 7.5rem);
   width: 15rem;
   height: 6.25rem;
@@ -536,30 +599,35 @@ section.step-7 {
 
 /* SECTION STEP 7 */
 
+/* SECTION STEP 8 */
+
+section.step-8 {
+  width: 100%;
+  height: auto;
+}
+
+.step-8__wrapper {
+  max-width: 22.5rem;
+  padding: 6rem 1rem;
+  margin: auto;
+}
+
+.step-8__text .step__paragraph--column p {
+  max-width: 50ch;
+  margin: auto;
+}
+
+/* SECTION STEP 8 */
+
 /* MEDIA QUERIES */
 
-/* 64rem */
+/* 1024px */
 @media (min-width: 64em) {
   .wrapper {
     width: 100%;
     height: 100%;
-    /* height: 438.9375rem; */
     position: relative;
   }
-
-  /* .wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(src/img/test.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top center;
-    z-index: -1;
-  } */
 
   /* SECTION INTRO */
 
@@ -854,7 +922,7 @@ section.step-7 {
   /* SECTION STEP 7 */
 }
 
-/* 77.5rem */
+/* 1240px */
 @media (min-width: 77.5em) {
   /* COMPONENTS */
 
@@ -1010,9 +1078,18 @@ section.step-7 {
   }
 
   /* SECTION STEP 7 */
+
+  /* SECTION STEP 8 */
+
+  .step-8__wrapper {
+    max-width: 68.75rem;
+    padding: 9rem 1rem;
+  }
+
+  /* SECTION STEP 8 */
 }
 
-/* 100rem */
+/* 1600px */
 @media (min-width: 100em) {
   /* COMPONENTS */
 
