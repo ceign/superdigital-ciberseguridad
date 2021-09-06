@@ -44,7 +44,7 @@ body {
   font-size: 1rem;
   font-family: "PF Handbook Pro";
   background-color: var(--background);
-  background: linear-gradient(180deg, #1a0d30 0%, #362455 30%);
+  background: linear-gradient(180deg, #1f1037 0%, #362455 20%);
 }
 
 * {
@@ -56,6 +56,7 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .wrapper h1::selection,
@@ -287,6 +288,7 @@ section.intro::before {
 .intro .intro__image img {
   display: block;
   width: 13.125rem;
+  filter: drop-shadow(-0.1875rem 0.625rem 0.1875rem #00000058);
 }
 
 /* END SECTION INTRO */
@@ -384,6 +386,7 @@ section.step-2::before {
   background-size: contain;
   background-repeat: no-repeat;
   bottom: -8.375rem;
+  filter: drop-shadow(-0.1875rem 0.625rem 0.1875rem #00000058);
 }
 
 .step-2__wrapper .step-2__text::before {
@@ -540,6 +543,7 @@ section.step-6 {
   width: 100%;
   max-width: 20.625rem;
   margin: auto;
+  filter: drop-shadow(-0.1875rem 0.75rem 0.1875rem #00000058);
 }
 
 /* END SECTION STEP 6 */
@@ -595,6 +599,7 @@ section.step-7::before {
   width: 100%;
   max-width: 20.625rem;
   margin: auto;
+  filter: drop-shadow(-0.1875rem 0.625rem 0.1875rem #00000075);
 }
 
 /* END SECTION STEP 7 */
@@ -790,6 +795,7 @@ section.step-8 {
     background-image: url(src/img/x.png);
     background-repeat: no-repeat;
     background-size: contain;
+    filter: drop-shadow(-0.1875rem 0.625rem 0.1875rem #00000058);
   }
 
   .step-3__text,
