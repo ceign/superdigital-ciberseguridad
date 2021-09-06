@@ -630,7 +630,7 @@ section.step-8 {
   /* SECTION INTRO */
 
   section.intro::before {
-    height: 90%;
+    height: 50%;
     background-size: 100%;
     background-image: url(src/img/frame-1-mobile.png);
     transform: scale(-1);
