@@ -2,32 +2,28 @@
   font-family: "PF Handbook Pro";
   font-style: normal;
   font-weight: 300;
-  src: url(https://cloud.modyocdn.com/uploads/ce54e724-6a5c-4e45-b779-accf6195b40c/original/PFHandbookProThin.ttf)
-    format("truetype");
+  src: url(src/fonts/PFHandbookProThin.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PF Handbook Pro";
   font-style: normal;
   font-weight: 400;
-  src: url(https://cloud.modyocdn.com/uploads/31ef7009-be86-4eb0-998a-06aee9154d7b/original/PFHandbookProRegular.ttf)
-    format("truetype");
+  src: url(src/fonts/PFHandbookProRegular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PF Handbook Pro";
   font-style: normal;
   font-weight: 700;
-  src: url(https://cloud.modyocdn.com/uploads/a29afe16-8d13-4589-9ece-c98f78190a58/original/PFHandbookProBold.ttf)
-    format("truetype");
+  src: url(src/fonts/PFHandbookProBold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "PF Handbook Pro";
   font-style: normal;
   font-weight: 900;
-  src: url(https://cloud.modyocdn.com/uploads/21e44181-684c-432c-ba81-a61715e5d2f2/original/PFHandbookProBlack.ttf)
-    format("truetype");
+  src: url(src/fonts/PFHandbookProBlack.ttf) format("truetype");
 }
 
 :root {
