@@ -144,6 +144,8 @@ body {
 .step__title img {
   display: block;
   margin: 0 0.75rem 0 0;
+  -webkit-filter: drop-shadow(-0.1875rem 0.3125rem 0.1875rem #000000);
+  filter: drop-shadow(-0.1875rem 0.3125rem 0.1875rem #000000);
 }
 
 .step__paragraph {
